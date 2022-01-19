@@ -58,13 +58,16 @@ router.
 
 //let's add some middleware:
 //
-// const infoArticles = [{title : "aphrodisiacs"}, {title : "fungi don't do what I want?"}, {title : "communism breaks python... :( you can't force all classes to be equal"}]
+ const infoArticles = [{title : "aphrodisiacs"}, {title : "fungi don't do what I want?"}, {title : "communism breaks python... :( you can't force all classes to be equal"}]
 //
 //let's put that into a very simple piece of middleware called param
 
 router.param('id', (req, res, next, id) => {
+    //res.send('hello world')
+
     req.titleName = infoArticles[id]
     next() //let's see what happens if we don't include next() here...
+    //res.send("here is some text")
 })
 
 
