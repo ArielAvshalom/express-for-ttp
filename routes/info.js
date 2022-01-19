@@ -14,6 +14,15 @@ router.get("/new", (req, res) => {
 //always put static routes on top of dynamic (parameterized routes)!
 
 //here is a parametrized route:
+//first add a post command before a get command - because you need to modify before you can read!
+
+router.post("/", (req, res) => {
+    res.send("Create Information")
+})
+
+router.get("/:id", (req, res) => {
+    res.send(`Here is a piece of information with this ID: ${req.params.id}`)
+})
 
 
 
