@@ -13,5 +13,9 @@ router.get("/new", (req, res) => {
 
 //always put static routes on top of dynamic (parameterized routes)!
 
+//here is a parametrized route:
+
+
+
 module.exports = router
 
